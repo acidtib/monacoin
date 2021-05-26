@@ -439,8 +439,8 @@ static UniValue getblocktemplate(const JSONRPCRequest& request)
         throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Monacoin is not connected!");
 
     // TODO-TIP: uncomment
-    // if (IsInitialBlockDownload())
-        // throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Monacoin is downloading blocks...");
+    if (IsInitialBlockDownload())
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Monacoin is downloading blocks...");
 
     static unsigned int nTransactionsUpdatedLast;
 

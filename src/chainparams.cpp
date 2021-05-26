@@ -78,8 +78,8 @@ public:
         consensus.BIP16Height = 0;
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256S("290056558bff5835168fefca8dd91d97b3df1c637deeb2fdb6f5afb4585aba1d");
-        consensus.BIP65Height = 977759;
-        consensus.BIP66Height = 977759;
+        consensus.BIP65Height = 0;
+        consensus.BIP66Height = 0;
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
         consensus.nPowTargetTimespan = 1.1 * 24 * 60 * 60; // 1.1 days
         consensus.nPowTargetSpacing = 1.5 * 60; // 1.5 minutes
@@ -103,7 +103,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00");
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000004293859f7"); //139
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x290056558bff5835168fefca8dd91d97b3df1c637deeb2fdb6f5afb4585aba1d"); //0
